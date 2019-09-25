@@ -18,5 +18,5 @@ export const useBartApi = () => {
     getStations();
   }, []);
 
-  return stationList
+  return stationList;
 }
