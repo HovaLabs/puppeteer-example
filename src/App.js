@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useBartApi } from './Bart';
 
 function App() {
+  const stations = useBartApi();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          console.log(`foo-input value: "${e.target['foo-input'].value}"`);
+        }}
+      >
+        <input type="input" name="foo-input" />
+        <input type="submit" value="Submit"/>
+      </form>
+      <div>
+        {stations.map(station => (
+          <div key={station.destination}>{station.destination}</div>
+        ))}
+      </div>
     </div>
   );
 }
