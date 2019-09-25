@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/puppeteer-example/static/css/main.0c907582.chunk.css",
-    "main.js": "/puppeteer-example/static/js/main.cc7ec7a0.chunk.js",
-    "main.js.map": "/puppeteer-example/static/js/main.cc7ec7a0.chunk.js.map",
+    "main.js": "/puppeteer-example/static/js/main.a8d87a71.chunk.js",
+    "main.js.map": "/puppeteer-example/static/js/main.a8d87a71.chunk.js.map",
     "runtime-main.js": "/puppeteer-example/static/js/runtime-main.183251a4.js",
     "runtime-main.js.map": "/puppeteer-example/static/js/runtime-main.183251a4.js.map",
     "static/js/2.279b85f4.chunk.js": "/puppeteer-example/static/js/2.279b85f4.chunk.js",
     "static/js/2.279b85f4.chunk.js.map": "/puppeteer-example/static/js/2.279b85f4.chunk.js.map",
     "index.html": "/puppeteer-example/index.html",
-    "precache-manifest.170dfd38b85318afaa013a02186f8c77.js": "/puppeteer-example/precache-manifest.170dfd38b85318afaa013a02186f8c77.js",
+    "precache-manifest.27cfe36809c4a6fbc31ffc304389a45f.js": "/puppeteer-example/precache-manifest.27cfe36809c4a6fbc31ffc304389a45f.js",
     "service-worker.js": "/puppeteer-example/service-worker.js",
     "static/css/main.0c907582.chunk.css.map": "/puppeteer-example/static/css/main.0c907582.chunk.css.map"
   }
