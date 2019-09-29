@@ -1,3 +1,4 @@
+# https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md#running-puppeteer-on-travis-ci
 language: node_js
 node_js: 10
 dist: trusty
