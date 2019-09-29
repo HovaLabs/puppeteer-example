@@ -5,6 +5,7 @@ function homePageTest() {
 
   describe("Puppeteer Example", () => {
     beforeAll(async () => {
+      page = await browser.newPage();
       await page.goto(url);
     });
 
