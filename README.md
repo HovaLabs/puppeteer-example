@@ -18,7 +18,7 @@ To launch the browser when running puppeteer tests, run `HEADLESS=false yarn tes
 ### `yarn test-prod`
 
 Tests all files that end with `.test.js`. This tests against the github pages website<br>
-To launch the browser when running puppeteer tests, run `HEADLESS=false yarn test`
+To launch the browser when running puppeteer tests, run `HEADLESS=false yarn test-prod`
 
 ### `yarn build`
 
