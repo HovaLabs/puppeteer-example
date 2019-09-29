@@ -1,15 +1,15 @@
 /* global page */
 
 const url = process.env.TEST_PROD
-    ? 'https://hovalabs.github.io/puppeteer-example'
-    : 'http://localhost:3000';
+  ? "https://hovalabs.github.io/puppeteer-example"
+  : "http://localhost:3000";
 
-describe('Puppeteer Example', () => {
-    beforeAll(async () => {
-        await page.goto(url);
-    });
+describe("Puppeteer Example", () => {
+  beforeAll(async () => {
+    await page.goto(url);
+  });
 
-    it('should be titled "React App"', async () => {
-        await expect(page.title()).resolves.toMatch('React App');
-    });
+  it('should be titled "React App"', async () => {
+    await expect(page.title()).resolves.toMatch("React App");
+  });
 });

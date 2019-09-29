@@ -19,7 +19,9 @@
     "test-prod": "TEST_PROD=true jest",
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "prettier": "prettier --write ./src/**/*.js ./e2e/**/*.js",
+    "lint": "eslint ./e2e ./src"
   },
   "eslintConfig": {
     "extends": "react-app"
