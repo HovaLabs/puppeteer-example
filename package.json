@@ -16,6 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
+    "test-prod": "TEST_PROD=true jest",
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"
