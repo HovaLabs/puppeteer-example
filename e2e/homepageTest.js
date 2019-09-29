@@ -11,7 +11,7 @@ function homePageTest() {
     it('should be titled "React App"', async () => {
       await expect(page.title()).resolves.toMatch("React App");
     });
-  })
-};
+  });
+}
 
 export default homePageTest;
