@@ -9,3 +9,5 @@ env:
   browser: true
   jest: true
   node: true
+globals:
+  page: true # used by puppeteer
