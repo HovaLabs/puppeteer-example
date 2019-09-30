@@ -11,6 +11,10 @@ function homePageTest() {
       await page.goto(url);
     });
 
+    afterAll(async () => {
+      await page.close();
+    });
+
     it('should be titled "React App"', async () => {
       await expect(page.title()).resolves.toMatch("React App");
       await expect(page).toClick("a", {
