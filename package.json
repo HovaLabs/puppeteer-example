@@ -67,6 +67,5 @@
     "hooks": {
       "pre-commit": "yarn lint"
     }
-  },
-  "homepage": "https://hovalabs.github.io/puppeteer-example/"
+  }
 }
