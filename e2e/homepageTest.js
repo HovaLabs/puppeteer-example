@@ -16,6 +16,7 @@ function homePageTest() {
       await expect(page).toClick("a", {
         text: "12th St. Oakland City Center"
       });
+      await page.waitFor(100);
       const currentUrl = urlParser.parse(page.url());
       expect(currentUrl.path).toEqual("/12TH");
     });
