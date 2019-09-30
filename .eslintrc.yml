@@ -11,3 +11,4 @@ env:
   node: true
 globals:
   page: true # used by puppeteer
+  browser: true # used by puppeteer
