@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/puppeteer-example/precache-manifest.27cfe36809c4a6fbc31ffc304389a45f.js"
+  "/puppeteer-example/precache-manifest.2cdc786a5c55102e3ebff7e520807702.js"
 );
 
 self.addEventListener('message', (event) => {
