@@ -4,23 +4,15 @@ import { get } from "lodash";
 
 import { LocationContext } from "../LocationContext/LocationContext";
 import { stations } from "./stations";
+import { calculateDistance } from "./utils";
 
-function calculateDistance(lon1, lat1, lon2, lat2) {
-  const R = 6371; // Radius of the earth in km
-  const dLat = ((lat2 - lat1) * Math.PI) / 180; // Javascript functions in radians
-  const dLon = ((lon2 - lon1) * Math.PI) / 180;
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos((lat1 * Math.PI) / 180) *
-      Math.cos((lat2 * Math.PI) / 180) *
-      Math.sin(dLon / 2) *
-      Math.sin(dLon / 2);
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  const d = R * c; // Distance in km
-  return d * 0.621371; // convert to miles
-}
+const sortButtons = ["Distance", "A-Z"];
 
 export const StationList = () => {
+  const [selectedSortButton, setSelectedSortButton] = React.useState(
+    sortButtons[0]
+  );
+
   const location = React.useContext(LocationContext);
   const longitude = get(location, "coords.longitude");
   const latitude = get(location, "coords.latitude");
@@ -41,11 +33,26 @@ export const StationList = () => {
         return { ...station, distance };
       })
       .sort((a, b) => {
-        return a.distance - b.distance;
+        if (selectedSortButton === sortButtons[0]) {
+          return a.distance - b.distance;
+        }
+        return a.name - b.name;
       });
 
     return () => (
       <>
+        {sortButtons.map(r => (
+          <button
+            key={r}
+            type="button"
+            onClick={() => setSelectedSortButton(r)}
+            style={{
+              background: r === selectedSortButton ? "#FFCCCC" : "#FFFFFF"
+            }}
+          >
+            {r}
+          </button>
+        ))}
         {stationArray.map(station => (
           <div key={station.abbr}>
             <Link to={`/${station.abbr}`}>
@@ -56,7 +63,7 @@ export const StationList = () => {
         ))}
       </>
     );
-  }, [latitude, longitude]);
+  }, [selectedSortButton, latitude, longitude]);
 
   return <Stations />;
 };
