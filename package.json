@@ -65,7 +65,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint"
+      "pre-commit": "yarn lint && ./scripts/gitflow-check.sh"
     }
   }
 }
